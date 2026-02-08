@@ -14,7 +14,7 @@ else:
 
 # 3. กำหนดโมเดล (ใช้ตัวเทพที่คุณเจอ!)
 # เราเลือก gemini-2.0-flash เพราะเร็วและฉลาดมาก
-model = genai.GenerativeModel('gemini-2.0-flash')
+model = genai.GenerativeModel('gemini-flash-latest')
 
 # กำหนดนิสัย (System Prompt) - แก้ตรงนี้เพื่อเปลี่ยนนิสัย
 SYSTEM_PROMPT = """
@@ -65,3 +65,4 @@ if user_input := st.chat_input("พิมพ์ระบายความใน
     
     # 6.3 บันทึกคำตอบลงความจำ
     st.session_state.messages.append({"role": "assistant", "content": full_response})
+
