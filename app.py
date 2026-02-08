@@ -13,7 +13,7 @@ else:
     st.stop()
 
 # 3. กำหนดโมเดล (ใช้ Gemini 1.5 Flash รุ่นใหม่ เร็วและฟรี)
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-pro')
 
 # กำหนดนิสัย (System Prompt) - ใส่ตรงนี้
 SYSTEM_PROMPT = """
@@ -62,3 +62,4 @@ if user_input := st.chat_input("พิมพ์ระบายความใน
     
     # 6.3 บันทึกคำตอบลงความจำ
     st.session_state.messages.append({"role": "assistant", "content": full_response})
+
